@@ -7,7 +7,7 @@ window.siteContent = {
         logo: "JunHyun Lee",
         logoAccent: "_",
         links: [
-            { label: "Projects", href: "#projects" },
+            { label: "Projects", href: "#about" },
             // { label: "About", href: "#about" },
             { label: "Tech", href: "#Tech" },
             // { label: "Awards", href: "#awards" },
@@ -33,22 +33,16 @@ window.siteContent = {
         {
             title: "HMI",
             description: "Human-Machine Interface",
-            url: "https://youtu.be/E9MqFM5MKEs",
+            url: "#about",
             backgroundImage: "./imgs/HMI_ok.gif",
             backgroundColor: "#1e1e1e",
             featured: true
         },
-        {
-            title: "IU toon",
-            description: "Singer IU Song Serving Page",
-            url: "https://github.com/wnghdcjfe/IUtoon",
-            backgroundImage: "./imgs/iu.gif",
-            backgroundColor: "#ed1a44"
-        },
+        
         {   
             title: "Admin",
             description: "Administrator",
-            url: "https://youtu.be/HruYK3AVzx4",
+            url: "#about",
             backgroundImage: "./imgs/KMPlayer_ok.gif",
             backgroundColor: "#1e1e1e",
             featured: true
@@ -56,45 +50,89 @@ window.siteContent = {
         {
             title: "KNUE",
             description: "University community web site",
-            url: "https://github.com/wnghdcjfe/wnghdcjfe.github.io/blob/master/knue.md",
+            url: "#about2",
             backgroundImage: "./imgs/knue.gif",
-            backgroundColor: "#000000"
+            backgroundColor: "#000000",
+            featured: true
+        },
+        {
+            title: "IU toon",
+            description: "Singer IU Song Serving Page",
+            url: "#about3",
+            backgroundImage: "./imgs/iu.gif",
+            backgroundColor: "#ed1a44",
+            featured: true
         }
     ],
-    about: {
-        title: "Projects",
-        paragraphs: [
-            '<span class="about-heading">전기차 충전기 통합 운영 시스템</span>',
-            '- <a href="https://youtu.be/E9MqFM5MKEs" target="_blank">HMI 동영상</a>',
-            '- <a href="https://youtu.be/HruYK3AVzx4" target="_blank">Admin 동영상</a>',
-            '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+    abouts: [
+        {
+            id: "about",
+            title: "Project",
+            paragraphs: [
+                '<span class="about-heading">전기차 충전기 통합 운영 시스템</span>',
+                "충전기 사용자 화면, 운영 서버, 관리자 프로그램을 분리된 구조로 설계하여　충전 제어, 카드 인증, 충전 상태 모니터링, 로그 관리,　　　 　　　　　　　원격 제어를 처리하는 시스템",
+                '- <a href="https://youtu.be/1vLOwdozWms" target="_blank">HMI 동영상</a>',
+                '- <a href="https://youtu.be/tG-1DJW6-VA" target="_blank">Admin 동영상</a>',
+                '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+                '- <a href="https://github.com/siroimono-0/EV_mcu" target="_blank">MCU Git 링크</a>',
+                
 
-            '<hr class="about-divider">',
-            '<span class="about-heading">와이어 샤크</span>',
-            '- <a href="https://영상URL3" target="_blank">영상 링크 3</a>',
-            '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+                '<hr class="about-divider-wide">',
 
-            '<hr class="about-divider">',
-            '<span class="about-heading">미니 게임</span>',
-            '- <a href="https://영상URL4" target="_blank">영상 링크 4</a>',
-            '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
-        ]
-    },
+                "담당",
+                '<span class="about-heading_2">QML 기반 전기차 충전기 HMI UI/UX 개발</span>',
+                "- C++ - QML 연동 구조를 설계하고, StackView 기반의 충전 플로우 구현",
+                "- USB-Serial 어댑터를 이용해 RS232/RS485 장비와 </br>　시리얼 통신을 구성하고 Modbus RTU 기반 </br>　제어 명령 송신 및 상태 데이터 수신 기능 구현",
+
+                "- launcher 및 systemd user service 기반 실행/재시작 구조 구성",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">WebSocket 기반 실시간 통신 기능 개발</span>',
+                "- HMI 인증, heartbeat, 충전 로그 전송, 회원카드 승인/종료 처리,</br>　관리자 명령 수신 기능 구현",
+
+                "- PostgreSQL 기반으로 충전 로그, HMI 상태, 회원카드 데이터를 관리하고,</br>　DB 장애 시 SQLite에 임시 저장 후 재전송하는 복구 로직 구현",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">Qt Widgets 기반 관리자 프로그램 개발</span>',
+                "- 매장 등록, HMI 등록, 로그 조회, 회원카드 조회/수정, 원격 제어 기능 구현",
+
+                "- 광고 mp4 업로드/다운로드 및 HMI 재생 기능 구현",
+            ]
+        },
+        {
+            id: "about2",
+            title: "Project",
+            paragraphs: [
+                '<span class="about-heading">와이어 샤크</span>',
+                '- <a href="https://영상URL3" target="_blank">영상 링크 3</a>',
+                '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+            ]
+        },
+        {
+            id: "about3",
+            title: "Project",
+            paragraphs: [
+                '<span class="about-heading">미니 게임</span>',
+                '- <a href="https://영상URL4" target="_blank">영상 링크 4</a>',
+                '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+            ]
+        }
+    ],
     tech: {
-        title: "Tech",
+        // title: "Tech",
+        title: "",
         categories: [
             {
-                label: "Strong",
-                items: "C++ / Qt / QML / Linux"
             },
             {
-                label: "Knowledgeable",
-                items: "C / Shell Script / SQLite / PostgreSQL / Git / AWS"
             }
             
         ]
     },
     awards: {
+        // title: "",
         title: "",
         items: [
             {

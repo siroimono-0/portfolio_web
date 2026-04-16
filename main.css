@@ -268,8 +268,8 @@ a:focus,a:hover {
 }
 
 .project--featured {
-    width: 66.66%;
-    height: 700px
+    width: 50%;
+    height: 500px
 }
 
 .rank {
@@ -299,16 +299,40 @@ a:focus,a:hover {
 }
 
 .about-heading {
-    font-size: 1.5em;
-    font-weight: 300;
+    font-size: 1.9em;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0.2em;
+}
+
+.about-heading_2 {
+    font-size: 1.3em;
+    font-weight: 500;
     display: inline-block;
     margin-bottom: 0.2em;
 }
 
 .about-divider {
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 2px solid #ccc;
+    /* border-top: 1px soild #1e1e1e; */
     margin: 0.5em 0;
+}
+
+.about-divider-wide {
+    border: none;
+    height: 2px;
+    margin: 0.5em 0;
+    background: repeating-linear-gradient(
+        90deg,
+        #ccc 0,
+        #ccc 3px,
+        transparent 3px,
+        transparent 12px
+    );
+    background-size: 12px 2px;
+    background-repeat: repeat-x;
+    border-radius: 999px;
 }
 
 p.text-intro {

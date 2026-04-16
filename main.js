@@ -76,8 +76,10 @@ const createProjectItem = (project) => {
     const link = document.createElement("a");
     link.className = "project-content";
     link.href = project.url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
+    if (!project.url.startsWith("#")) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+    }
 
     const title = document.createElement("h3");
     title.className = "project-title";
@@ -120,7 +122,7 @@ const buildSectionWrapper = (sectionData) => {
 };
 
 const renderAbout = (aboutData) => {
-    const aboutRoot = document.getElementById("about");
+    const aboutRoot = document.getElementById(aboutData.id || "about");
     if (!aboutRoot || !aboutData) return;
     const wrapper = buildSectionWrapper(aboutData);
     (aboutData.paragraphs || []).forEach((text) => {
@@ -181,14 +183,17 @@ const renderAwards = (awardsData) => {
 
 const initScrollAnimations = () => {
     let scrollPos = window.scrollY;
-    const about = document.querySelector("#about > .text-wrap");
+    const aboutWraps = document.querySelectorAll(".about > .text-wrap");
     const tech = document.querySelector("#Tech > .text-wrap");
     const awards = document.querySelector("#awards > .text-wrap");
-    const sections = [
-        { element: about, offset: () => about?.offsetHeight - 200 || 0 },
-        { element: tech, offset: () => (tech?.offsetHeight || 0) + 300 },
-        { element: awards, offset: () => (awards?.offsetHeight || 0) + 700 }
-    ];
+    const sections = [];
+    aboutWraps.forEach((el) => {
+        sections.push({ element: el, offset: () => el.offsetTop - window.innerHeight + 200 });
+    });
+    sections.push(
+        { element: tech, offset: () => (tech?.offsetTop || 0) - window.innerHeight + 200 },
+        { element: awards, offset: () => (awards?.offsetTop || 0) - window.innerHeight + 200 }
+    );
 
     const handleScroll = () => {
         scrollPos = window.scrollY;
@@ -207,7 +212,7 @@ const renderSite = (data) => {
     renderNavigation(data.navigation);
     renderHero(data.hero);
     renderProjects(data.projects);
-    renderAbout(data.about);
+    (data.abouts || []).forEach((aboutData) => renderAbout(aboutData));
     renderTech(data.tech);
     renderAwards(data.awards);
     initScrollAnimations();
