@@ -48,11 +48,11 @@ window.siteContent = {
             featured: true
         },
         {
-            title: "KNUE",
-            description: "University community web site",
+            title: "mini_Wireshark",
+            description: "Network Packet Analysis",
             url: "#about2",
-            backgroundImage: "./imgs/knue.gif",
-            backgroundColor: "#000000",
+            backgroundImage: "./imgs/mini_wireshark_.gif",
+            backgroundColor: "#1e1e1e",
             featured: true
         },
         {
@@ -60,7 +60,7 @@ window.siteContent = {
             description: "Singer IU Song Serving Page",
             url: "#about3",
             backgroundImage: "./imgs/iu.gif",
-            backgroundColor: "#ed1a44",
+            backgroundColor: "#1e1e1e",
             featured: true
         }
     ],
@@ -70,7 +70,7 @@ window.siteContent = {
             title: "Project",
             paragraphs: [
                 '<span class="about-heading">전기차 충전기 통합 운영 시스템</span>',
-                "충전기 사용자 화면, 운영 서버, 관리자 프로그램을 분리된 구조로 설계하여　충전 제어, 카드 인증, 충전 상태 모니터링, 로그 관리,　　　 　　　　　　　원격 제어를 처리하는 시스템",
+                "충전기 사용자 화면, 운영 서버, 관리자 프로그램을 분리된 구조로 설계하여</br>충전 제어, 카드 인증, 충전 상태 모니터링, 로그 관리,</br>원격 제어를 처리하는 시스템",
                 '- <a href="https://youtu.be/1vLOwdozWms" target="_blank">HMI 동영상</a>',
                 '- <a href="https://youtu.be/tG-1DJW6-VA" target="_blank">Admin 동영상</a>',
                 '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
@@ -105,9 +105,24 @@ window.siteContent = {
             id: "about2",
             title: "Project",
             paragraphs: [
-                '<span class="about-heading">와이어 샤크</span>',
-                '- <a href="https://영상URL3" target="_blank">영상 링크 3</a>',
-                '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+                '<span class="about-heading">미니 와이어 샤크</span>',
+                "실시간 패킷 캡처와 pcap 파일 분석을 통해 패킷 목록,</br> 프로토콜 정보, 상세 헤더 구조, Hex Dump를 확인할 수 있는</br>네트워크 패킷 분석 애플리케이션",
+                '- <a href="https://youtu.be/1sYCxgMe7ZM" target="_blank">미니 와이어 샤크 동영상</a>',
+                '- <a href="https://github.com/siroimono-0/Mini_Wireshark" target="_blank">Git 링크</a>',
+
+                '<hr class="about-divider-wide">',
+
+                "담당",
+                '<span class="about-heading_2">QML 기반 패킷 분석 UI 개발</span>',
+                "- 패킷 리스트를 Source / Destination / Protocol / Length / Info 기준으로</br>　시각화하고 정렬 및 상세 조회 기능 구현",
+                "- Ethernet / IPv4 / TCP / UDP / ICMP 헤더 정보를</br>　트리 구조와 Hex Dump 형태로 확인할 수 있는 상세 분석 화면 구현",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">libpcap 기반 캡처 / 분석 기능 개발</span>',
+                "- TCP / UDP / ICMP 프로토콜 파싱 및 포트, 플래그, </br>　Seq / Ack, Window Size, TTL, Payload Length 정보 추출 기능 구현",
+                "- BPF 필터 기반 패킷 필터링 기능 구현"
+
             ]
         },
         {
@@ -121,8 +136,8 @@ window.siteContent = {
         }
     ],
     tech: {
-        // title: "Tech",
-        title: "",
+        title: "Tech",
+        // title: "",
         categories: [
             {
             },
