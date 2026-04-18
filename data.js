@@ -56,10 +56,10 @@ window.siteContent = {
             featured: true
         },
         {
-            title: "IU toon",
-            description: "Singer IU Song Serving Page",
+            title: "mini_game",
+            description: "Crazy Arcade Motif Arcade Game",
             url: "#about3",
-            backgroundImage: "./imgs/iu.gif",
+            backgroundImage: "./imgs/game_ghost_transition.gif",
             backgroundColor: "#1e1e1e",
             featured: true
         }
