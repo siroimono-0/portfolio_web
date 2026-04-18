@@ -99,6 +99,11 @@ window.siteContent = {
                 "- 매장 등록, HMI 등록, 로그 조회, 회원카드 조회/수정, 원격 제어 기능 구현",
 
                 "- 광고 mp4 업로드/다운로드 및 HMI 재생 기능 구현",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">STM32 기반 충전기 제어 MCU 펌웨어 개발</span>',
+                "- UART 기반 Modbus RTU 프로토콜 처리,</br>　GPIO 비상정지 입력 처리 기능 구현",
             ]
         },
         {
@@ -129,9 +134,29 @@ window.siteContent = {
             id: "about3",
             title: "Project",
             paragraphs: [
-                '<span class="about-heading">미니 게임</span>',
-                '- <a href="https://영상URL4" target="_blank">영상 링크 4</a>',
-                '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
+                '<span class="about-heading">2인용 미니 게임</span>',
+                "게임 로직 프로세스와 QML 렌더링 프로세스를 분리하고,</br> POSIX IPC(shared memory, message queue, semaphore)를 활용해</br> 맵 데이터와 종료 이벤트를 동기화한</br> 크레이지 아케이드 모티브의 2인 대전 미니게임",
+                '- <a href="https://youtu.be/RfLiY9oJXyg" target="_blank">영상 링크 4</a>',
+                '- <a href="https://github.com/siroimono-0/mini_game" target="_blank">Git 링크</a>',
+
+                '<hr class="about-divider-wide">',
+
+                "담당",
+                '<span class="about-heading_2"> C++ 기반 게임 로직 및 타일맵 시스템 개발 </span>',
+                "- 2인 로컬 플레이 구조 구현",
+                "- BFS 기반 경로 탐색을 적용해 유령이 플레이어를 추적하는 이동 로직 구현",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2"> 멀티프로세스 / 멀티스레드 기반 실행 구조 개발 </span>',
+                "- fork/exec 기반으로 게임 로직과 렌더링 프로세스를 분리하고,</br>　POSIX shared memory를 이용해 맵 데이터를 공유하는 구조 설계",
+                "- message queue를 이용해 게임 종료 신호와 프로세스 간 응답을 처리하고,</br>　semaphore로 공유 자원 접근을 동기화",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2"> QML 기반 맵 렌더링 개발 </span>',
+                "- QAbstractListModel 기반으로 2차원 맵 데이터를 모델화하고,</br>　GridView를 이용해 타일 단위로 화면에 렌더링하는 구조 구현",
+
             ]
         }
     ],
@@ -140,8 +165,12 @@ window.siteContent = {
         // title: "",
         categories: [
             {
+                label: "주력",
+                items: "C++ / Qt / QML / Linux"
             },
             {
+                label: "알고 있음",
+                items: "C / Shell Script / SQLITE / PostgreSQL / Embedded FW / Modbus RTU / Git / AWS"
             }
             
         ]
