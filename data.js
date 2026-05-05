@@ -10,6 +10,7 @@ window.siteContent = {
             { label: "Projects", href: "#about" },
             // { label: "About", href: "#about" },
             { label: "Tech", href: "#Tech" },
+            { label: "Study Notes", href: "#excel" },
             // { label: "Awards", href: "#awards" },
             // { label: "Blog", href: "https://blog.naver.com/jhc9639", external: true },
             { iconClass: "fab fa-github", href: "https://github.com/siroimono-0", external: true, noUnderline: true }
