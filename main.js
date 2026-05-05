@@ -144,7 +144,7 @@ const renderTech = (techData) => {
         label.className = "text-intro";
         label.textContent = category.label;
         const items = document.createElement("p");
-        items.textContent = category.items;
+        items.innerHTML = category.items;
         wrapper.appendChild(label);
         wrapper.appendChild(items);
     });
@@ -220,4 +220,20 @@ const renderSite = (data) => {
 
 window.addEventListener("DOMContentLoaded", () => {
     renderSite(siteContent);
+    
+    // Excel iframe toggle functionality
+    const toggleBtn = document.getElementById("toggleExcel");
+    const excelContainer = document.getElementById("excelContainer");
+    
+    if (toggleBtn && excelContainer) {
+        toggleBtn.addEventListener("click", () => {
+            if (excelContainer.style.display === "none") {
+                excelContainer.style.display = "block";
+                toggleBtn.textContent = "[C/C++ & STL 학습 정리 Excel 숨기기]";
+            } else {
+                excelContainer.style.display = "none";
+                toggleBtn.textContent = "[C/C++ & STL 학습 정리 Excel 바로보기]";
+            }
+        });
+    }
 });

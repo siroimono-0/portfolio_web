@@ -166,11 +166,11 @@ window.siteContent = {
         categories: [
             {
                 label: "주력",
-                items: "C++ / Qt / QML / Linux"
+                items: '<a href="#cpp-stl">C++</a> / <a href="#qt-qml">Qt</a> / <a href="#qt-qml">QML</a> / <a href="#linux-shell">Linux</a>'
             },
             {
                 label: "알고 있음",
-                items: "C / Shell Script / SQLITE / PostgreSQL / Embedded FW / Modbus RTU / Git / AWS"
+                items: '<a href="#cpp-stl">C</a> / <a href="#linux-shell">Shell Script</a> / SQLITE / PostgreSQL / Embedded FW / Modbus RTU / Git / AWS'
             }
             
         ]
