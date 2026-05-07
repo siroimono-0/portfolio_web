@@ -171,7 +171,7 @@ window.siteContent = {
             },
             {
                 label: "알고 있음",
-                items: '<a href="#cpp-stl">C</a> / <a href="#linux-shell">Shell Script</a> / SQLITE / PostgreSQL / Embedded FW / Modbus RTU / Git / AWS'
+                items: '<a href="#cpp-stl">C</a> / <a href="#linux-shell">Shell Script</a> / SQLITE / PostgreSQL / Figma / AWS / Git / Embedded FW '
             }
             
         ]
