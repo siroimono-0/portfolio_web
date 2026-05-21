@@ -345,6 +345,16 @@ p.text-intro {
     clear: both
 } 
 
+.Tech .text-wrap p {
+    padding: 0 0 0.3em;
+}
+
+.Tech .text-wrap p.text-intro {
+    padding-top: 0.8em;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
 .Tech a {
     background-image: none;
     text-shadow: none;

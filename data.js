@@ -137,8 +137,7 @@ window.siteContent = {
             paragraphs: [
                 '<span class="about-heading">2인용 미니 게임</span>',
                 "게임 로직 프로세스와 QML 렌더링 프로세스를 분리하고,</br> POSIX IPC(shared memory, message queue, semaphore)를 활용해</br> 맵 데이터와 종료 이벤트를 동기화한</br> 크레이지 아케이드 모티브의 2인 대전 미니게임",
-                '- <a href="https://youtu.be/_dlqGL0b5Js" target="_blank">2인용 미니 게임 동영상</a>',
-                '- <a href="https://github.com/siroimono-0/mini_game" target="_blank">Git 링크</a>',
+                '- <a href="https://youtu.be/Wt0noeUcdUI" target="_blank">2인용 미니 게임 동영상</a>', '- <a href="https://github.com/siroimono-0/mini_game" target="_blank">Git 링크</a>',
 
                 '<hr class="about-divider-wide">',
 
@@ -166,12 +165,16 @@ window.siteContent = {
         // title: "",
         categories: [
             {
-                label: "주력",
-                items: '<a href="#cpp-stl">C++</a> / <a href="#qt-qml">Qt</a> / <a href="#qt-qml">QML</a> / <a href="#linux-shell">Linux</a>'
+                label: "Language",
+                items: 'C / <a href="#cpp-stl">C++</a> / C# / <a href="#qt-qml">Qt</a> / <a href="#qt-qml">QML</a>'
             },
             {
-                label: "알고 있음",
-                items: '<a href="#cpp-stl">C</a> / <a href="#linux-shell">Shell Script</a> / SQLITE / PostgreSQL / Figma / AWS / Git / Embedded FW '
+                label: "Development Environment",
+                items: 'Windows / <a href="#linux-shell">Linux</a> </br> Qt Creator / Visual Studio / VScode'
+            },
+            {
+                label: "Additional Skills",
+                items: ' <a href="#linux-shell">Shell Script</a> / SQLITE / PostgreSQL </br> Figma / AWS / Git'
             }
             
         ]
