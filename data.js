@@ -72,8 +72,8 @@ window.siteContent = {
             paragraphs: [
                 '<span class="about-heading">전기차 충전기 통합 운영 시스템</span>',
                 "충전기 사용자 화면, 운영 서버, 관리자 프로그램을 분리된 구조로 설계하여</br>충전 제어, 카드 인증, 충전 상태 모니터링, 로그 관리,</br>원격 제어를 처리하는 시스템",
-                '- <a href="https://youtu.be/GHDyNGbhUus" target="_blank">HMI 동영상</a>',
-                '- <a href="https://youtu.be/uo-QeQNxcF4" target="_blank">Admin 동영상</a>',
+                '- <a href="https://youtu.be/1vLOwdozWms" target="_blank">HMI 동영상</a>',
+                '- <a href="https://youtu.be/tG-1DJW6-VA" target="_blank">Admin 동영상</a>',
                 '- <a href="https://github.com/siroimono-0/EV_HMI_SV" target="_blank">Git 링크</a>',
                 '- <a href="https://github.com/siroimono-0/EV_mcu" target="_blank">MCU Git 링크</a>',
                 
