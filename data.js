@@ -7,7 +7,7 @@ window.siteContent = {
         logo: "JunHyun Lee",
         logoAccent: "_",
         links: [
-            { label: "Projects", href: "#about" },
+            { label: "Projects", href: "#about4" },
             // { label: "About", href: "#about" },
             { label: "Tech", href: "#Tech" },
             { label: "Study Notes", href: "#excel" },
@@ -41,15 +41,15 @@ window.siteContent = {
         },
         
         {   
-            title: "Admin",
-            description: "Administrator",
-            url: "#about",
-            backgroundImage: "./imgs/KMPlayer_ok.gif",
+            title: "Dicom Viewer",
+            description: "Dicom Viewer",
+            url: "#about4",
+            backgroundImage: "./imgs/dicom.gif",
             backgroundColor: "#1e1e1e",
             featured: true
         },
         {
-            title: "mini_Wireshark",
+            title: "mini Wireshark",
             description: "Network Packet Analysis",
             url: "#about2",
             backgroundImage: "./imgs/mini_wireshark_.gif",
@@ -66,6 +66,34 @@ window.siteContent = {
         }
     ],
     abouts: [
+            {
+            id: "about4",
+            title: "Project",
+            paragraphs: [
+                '<span class="about-heading">Dicom Viewer</span>',
+                "DICOM 파일과 디렉터리를 로드하여 </br>Axial / Coronal / Sagittal 3방향 의료영상을 확인할 수 있는</br>Qt / VTK 기반 DICOM 의료영상 뷰어",
+                '- <a href="https://youtu.be/FNyTcQPNEZ4" target="_blank">Dicom Viewer 동영상</a>',
+                '- <a href="https://github.com/siroimono-0/DICOM_VTK" target="_blank">Git 링크</a>',
+                '- <a href="https://github.com/siroimono-0/DICOM_VTK/releases/latest/download/DICOM_VTK_Installer.zip">다운로드</a>',
+                // '- <a href="./downloads/DICOM_VTK_Installer.zip" download>다운로드</a>',
+                
+
+                '<hr class="about-divider-wide">',
+
+                "담당",
+                '<span class="about-heading_2">Qt Widgets 기반 DICOM Viewer UI 개발</span>',
+                "- DICOM 트리, 3방향 영상 뷰어, 메타데이터 표시 영역을 분리한 화면 구성",
+                "- Patient / Study / Series 구조로 DICOM 데이터를 계층화하고,</br>　선택한 시리즈와 슬라이스를 화면에 연동",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">VTK 기반 의료영상 표시 기능 개발</span>',
+                "- vtkResliceImageViewer를 이용해 Axial / Coronal / Sagittal</br>　3방향 MPR 영상 뷰어 구현",
+                "- 슬라이더와 마우스 휠을 이용한 슬라이스 이동 및</br>　Crosshair 위치 표시 기능 구현",
+
+
+            ]
+        },
         {
             id: "about",
             title: "Project",
