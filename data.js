@@ -7,7 +7,7 @@ window.siteContent = {
         logo: "JunHyun Lee",
         logoAccent: "_",
         links: [
-            { label: "Projects", href: "#about4" },
+            { label: "Projects", href: "#projects" },
             // { label: "About", href: "#about" },
             { label: "Tech", href: "#Tech" },
             { label: "Study Notes", href: "#excel" },
@@ -31,6 +31,14 @@ window.siteContent = {
         ]
     },
     projects: [
+        {
+            title: "DomainGuard",
+            description: "DNS · WFP · TLS SNI 기반 Windows 네트워크 접근 제어",
+            url: "#domainguard",
+            backgroundColor: "#17212c",
+            featured: true,
+            extraClasses: ["project--domainguard", "active"]
+        },
         {
             title: "HMI",
             description: "Human-Machine Interface",
@@ -66,6 +74,50 @@ window.siteContent = {
         }
     ],
     abouts: [
+        {
+            id: "domainguard",
+            title: "Project",
+            paragraphs: [
+                '<span class="about-heading">DomainGuard</span><span class="domain-subtitle">Windows 네트워크 접근 제어 프로그램</span>',
+                "도메인과 실행 파일을 기준으로 네트워크 접근을 제어하는 C++ / MFC 기반 애플리케이션입니다.</br>로컬 DNS 프록시, Windows Filtering Platform(WFP), 커널 모드 드라이버를 연결해 DNS 질의와 프로그램의 통신을 제어하고, HTTPS 연결의 서버 이름을 검사합니다.",
+                '<span class="domain-tech-stack"><span>C++</span><span>MFC</span><span>WinSock2 · IOCP</span><span>WFP</span><span>WDM Driver</span><span>SQLite</span></span>',
+
+                '<a class="domain-github" href="https://github.com/siroimono-0/DomainGuard" target="_blank" rel="noopener noreferrer">GitHub에서 코드 보기 <span aria-hidden="true">↗</span></a>',
+                
+                '<a class="domain-github" href="https://youtu.be/yRB-6rCGgyM" target="_blank" rel="noopener noreferrer">DomainGuard 동영상 <span aria-hidden="true">↗</span></a>',
+
+                '<a class="domain-github" href="https://github.com/siroimono-0/Project_PDF/blob/main/DomainGuard_Portfolio.pdf" target="_blank" rel="noopener noreferrer"> PDF 보기 <span aria-hidden="true">↗</span></a>',
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">DNS 프록시와 하위 도메인 차단 정책</span>',
+                "로컬 DNS 프록시에서 질의 도메인을 확인하고, 차단 대상에는 NXDOMAIN 응답을 반환하도록 구현했습니다. 상위 도메인을 등록하면 하위 도메인까지 함께 검사합니다. 예를 들어 example.com 정책 하나로 www.example.com과 api.example.com의 접근을 제어할 수 있습니다.",
+                "허용된 질의는 업스트림 DNS 서버로 전달하고, Overlapped I/O와 IOCP로 응답을 수신합니다. 프록시 ID에 원본 질의 ID와 클라이언트 주소를 연결해 응답을 원래 요청자에게 전달합니다.",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">WFP 기반 프로그램별 통신 제어</span>',
+                "실행 파일 경로에서 WFP Application ID를 생성하고, 송신·수신 방향과 TCP·UDP, IP, 포트 조건을 조합한 차단 규칙을 등록합니다. 사용자가 선택한 프로그램의 네트워크 연결을 Windows 네트워크 스택의 ALE 계층에서 제어합니다.",
+                "DomainGuard와 루프백 연결을 제외한 프로그램의 외부 TCP/UDP 53번 포트 연결을 제한해, 다른 DNS 서버로 직접 질의하는 우회 경로를 차단했습니다.",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">커널 드라이버에서 HTTPS SNI 검사</span>',
+                "WDM 기반 WFP Callout Driver를 구현해 IPv4·IPv6의 송신 TCP 443번 포트 스트림을 검사합니다. TLS ClientHello의 SNI(Server Name Indication)에서 서버 이름을 추출하고, 차단 정책에 해당하면 연결을 종료합니다.",
+                "TLS 레코드를 읽는 데 필요한 데이터가 부족하면 WFP에 추가 스트림 데이터를 요청하도록 처리했습니다. HTTPS 본문을 복호화하지 않고, 연결 과정에 노출된 서버 이름을 기준으로 검사합니다.",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">MFC 정책 관리 화면과 DNS 로그</span>',
+                "도메인 차단 목록, 프로그램별 WFP 규칙, DNS 로그를 관리하는 MFC 화면을 구성했습니다. DNS 요청 시각, 응답 시간, 질의 유형, 허용·차단 결과를 3초 주기로 갱신해 정책 적용 결과를 확인할 수 있습니다.",
+                "도메인과 프로그램 차단 정책은 SQLite에 저장하고 다음 실행 시 다시 적용합니다. DB 작업은 전용 워커와 작업 큐에서 처리하며, 완료 메시지를 받은 Controller가 모델과 화면을 갱신합니다.",
+
+                '<hr class="about-divider-wide">',
+
+                '<span class="about-heading_2">사용자 모드와 커널 모드 연동</span>',
+                "공유 헤더에 IOCTL 코드와 요청 구조체를 정의하고, DeviceIoControl을 통해 GUI에서 변경한 도메인 정책을 드라이버로 전달합니다. 정책 관리 UI, 비동기 네트워크 처리, 커널 필터링을 하나의 애플리케이션으로 연결한 점이 이 프로젝트의 핵심입니다."
+            ]
+        },
             {
             id: "about4",
             title: "Project",
@@ -199,6 +251,10 @@ window.siteContent = {
             {
                 label: "Development Environment",
                 items: 'Windows / <a href="#linux-shell">Linux</a> </br> Qt Creator / Visual Studio / VScode'
+            },
+            {
+                label: "Windows & Network Programming",
+                items: '<a href="#domainguard">MFC / WinSock2 / IOCP / WFP / WDM Driver</a>'
             },
             {
                 label: "Additional Skills",

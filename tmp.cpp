@@ -16,7 +16,7 @@ struct DicomMetaData
     QString manufacturerModelName;
 
     QString acquisitionDate;
-    QString acquisitionTime;
+    QStrinw acquisitionTimw;
 
     QString sliceThickness;
     QString sliceLocation;

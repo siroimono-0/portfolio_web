@@ -522,6 +522,149 @@ p.text-intro {
     }
 }
 
+/* DomainGuard: existing project grid with a text-based cover. */
+.project--domainguard {
+    width: 100%;
+    height: 340px;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+    background-size: 40px 40px;
+    border-top: 3px solid #ed1a44;
+}
+
+.project--domainguard.active .project-content {
+    padding: 48px 24px;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.project--domainguard .project-title {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    text-align: center;
+    letter-spacing: -.04em;
+}
+
+.project--domainguard .project-description {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 12px;
+    line-height: 1.8;
+    color: #d7dee7;
+    word-break: keep-all;
+}
+
+.project--domainguard.active .project-underline {
+    margin: 20px auto;
+    border-color: #ed1a44;
+}
+
+.project--domainguard .project-content:focus-visible {
+    outline: 3px solid #ed1a44;
+    outline-offset: -8px;
+}
+
+.about--domainguard {
+    scroll-margin-top: 32px;
+}
+
+.about--domainguard .text-intro {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+.about--domainguard .about-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.domain-subtitle {
+    display: block;
+    margin-top: 8px;
+    color: #56616e;
+    font-size: 1.1rem;
+}
+
+.domain-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.domain-tech-stack > span {
+    padding: 5px 12px;
+    border: 1px solid #dce1e7;
+    border-radius: 4px;
+    background: #f6f8fa;
+    color: #364152;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.domain-github,
+.domain-github:hover,
+.domain-github:focus {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background: none;
+    text-shadow: none;
+    font-size: 1rem;
+}
+
+.domain-scope {
+    display: block;
+    padding: 20px 24px;
+    border-left: 3px solid #ed1a44;
+    background: #f6f8fa;
+    color: #56616e;
+    font-size: .95rem;
+    line-height: 1.9;
+}
+
+.domain-scope strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #17212c;
+}
+
+@media (max-width: 570px) {
+    .project--domainguard {
+        height: 280px;
+    }
+
+    .about--domainguard .text-intro {
+        font-size: 1.05rem;
+    }
+
+    .about--domainguard .about-heading_2 {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .domain-scope {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about--domainguard .animate-text {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .project--domainguard span {
+        transition: none;
+    }
+}
+
 /* Excel Section Styles */
 .excel-section {
     clear: both;
@@ -652,4 +795,4 @@ p.text-intro {
         width: 100%;
         min-height: 500px;
     }
-} 
+}
